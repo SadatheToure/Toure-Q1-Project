@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>My Geocode App</title>
+
+
+    <div class="masthead clearfix">
+      <div class="inner">
+        <nav class="nav nav-masthead">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="contact.html" target="blank">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+  </head>
+
+  <body>
+
+    <div class="logo">
+      <img src="logo1.jpg" alt="logo">
+    </div>
+    <div class="container clearfix">
+      <div id="map"></div>
+
+      <form id="location-form">
+        <div class="searchBox">
+          <div class="input-group">
+            <span class="input-group-btn">
+            <button class="btn btn-secondary" id="clear" type="button">Clear</button>
+            </span>
+            <input type="search" id="location-input" class="form-control form-control-lg afface" placeholder="Search for Meetups in your location...">
+            <span class="input-group-btn">
+            <button type="submit" class="btn btn-secondary" id="submitBtn">Submit</button>
+            </span>
+          </div>
+        </div>
+      </form>
+
+      <div class="card-block" id="formatted-address"></div>
+      <div class="container" id="address-components"></div>
+      <!-- <div class="card-block" id="geometry"></div> -->
+    </div>
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="geoScript.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaf5mDHzXYR-3zqjRz-Xo0ybXt-Y7F2OI&callback=initMap">
+    </script>
+  </body>
+
+</html>
+
+
+
+
+<!-- <form id="location-form">
+    <div class="btn-group" style="margin-bottom:20px;">
+      <input type="search" id="location-input" class="form-control form-control-lg">
+      <i id="searchClear" class="glyphicon glyphicon-glyphicon-remove"></i>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Submit</button>
+  </form> -->
